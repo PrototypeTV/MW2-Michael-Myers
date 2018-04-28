@@ -182,7 +182,7 @@ SetDvars()
 	SetDvarIfUninitialized( "scr_infected_allow_allies_attachments", 1 );
 }
 
-SurvivorDvars()
+SurvivorDvars() // Use this to add/edit client dvars for the survivors.
 {
 	self endon ( "disconnect" );
 	self setClientDvar( "cg_drawFriendlyNames", 0 );
@@ -193,7 +193,7 @@ SurvivorDvars()
 	self setClientDvar( "cg_hudMapFriendlyWidth", 0 );
 }
 
-MichaelMyersDvars()
+MichaelMyersDvars() // Use this to add/edit client dvars for the Michael Myers.
 {
 	self endon ( "disconnect" );
 	self setClientDvar( "cg_drawFriendlyNames", 1 );
