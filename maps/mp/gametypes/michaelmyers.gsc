@@ -182,6 +182,28 @@ SetDvars()
 	SetDvarIfUninitialized( "scr_infected_allow_allies_attachments", 1 );
 }
 
+SurvivorDvars()
+{
+	self endon ( "disconnect" );
+	self setClientDvar( "cg_drawFriendlyNames", 0 );
+	self setClientDvar( "cg_drawCrosshairNames", 0 );
+	self setClientDvar( "compassFriendlyHeight", 0 );
+	self setClientDvar( "compassFriendlyHeight", 0 );
+	self setClientDvar( "cg_hudMapFriendlyHeight", 0 );
+	self setClientDvar( "cg_hudMapFriendlyWidth", 0 );
+}
+
+MichaelMyersDvars()
+{
+	self endon ( "disconnect" );
+	self setClientDvar( "cg_drawFriendlyNames", 1 );
+	self setClientDvar( "cg_drawCrosshairNames", 1 );
+	self setClientDvar( "compassFriendlyHeight", 16 );
+	self setClientDvar( "compassFriendlyHeight", 16 );
+	self setClientDvar( "cg_hudMapFriendlyHeight", 15 );
+	self setClientDvar( "cg_hudMapFriendlyWidth", 15 );
+}
+
 onTimeLimit()
 {
 	thread maps\mp\gametypes\_damage::doFinalKillcam(
@@ -387,13 +409,7 @@ SetSurvivorClass()
 	self maps\mp\perks\_perks::givePerk("specialty_spygame"); 		//Cold Blooded Pro
 	self _SetPerk("flash_grenade_mp");
 	self [[game["axis_model"]["GHILLIE"]]]();
-	self endon ( "disconnect" );
-	self setClientDvar( "cg_drawFriendlyNames", 0 );
-	self setClientDvar( "cg_drawCrosshairNames", 0 );
-	self setClientDvar( "compassFriendlyHeight", 0 );
-	self setClientDvar( "compassFriendlyHeight", 0 );
-	self setClientDvar( "cg_hudMapFriendlyHeight", 0 );
-	self setClientDvar( "cg_hudMapFriendlyWidth", 0 );
+	SurvivorDvars();
 }
 
 SetInfectedClass()
@@ -414,14 +430,7 @@ SetInfectedClass()
 	self maps\mp\perks\_perks::givePerk("specialty_quieter"); 		//Ninja Pro
 	self maps\mp\perks\_perks::givePerk("specialty_coldblooded"); 	//Cold Blooded
 	self maps\mp\perks\_perks::givePerk("specialty_spygame"); 		//Cold Blooded Pro
-	self [[game["axis_model"]["GHILLIE"]]]();
-	self endon ( "disconnect" );
-	self setClientDvar( "cg_drawFriendlyNames", 1 );
-	self setClientDvar( "cg_drawCrosshairNames", 1 );
-	self setClientDvar( "compassFriendlyHeight", 16 );
-	self setClientDvar( "compassFriendlyHeight", 16 );
-	self setClientDvar( "cg_hudMapFriendlyHeight", 15 );
-	self setClientDvar( "cg_hudMapFriendlyWidth", 15 );
+	MichaelMyersDvars();
 }
 
 Specialist_Main()

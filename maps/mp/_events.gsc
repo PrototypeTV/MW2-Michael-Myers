@@ -2,6 +2,28 @@
 #include maps\mp\gametypes\_hud_util;
 #include common_scripts\utility;
 
+MikeToSurvivors() //Look to organise this.
+{
+	wait 0.1;
+		self takeAllWeapons();
+		self maps\mp\gametypes\_menus::addToTeam( "allies" );
+		self GiveWeapon("flash_grenade_mp");
+		self SetWeaponAmmoClip("flash_grenade_mp",2);
+		self SetOffhandSecondaryClass( "flash" );
+		self endon ( "disconnect" );
+		self setClientDvar( "cg_drawFriendlyNames", 0 );
+		self setClientDvar( "cg_drawCrosshairNames", 0 );
+		self setClientDvar( "compassFriendlyHeight", 0 );
+		self setClientDvar( "compassFriendlyHeight", 0 );
+		self setClientDvar( "cg_hudMapFriendlyHeight", 0 );
+		self setClientDvar( "cg_hudMapFriendlyWidth", 0 );
+		self GiveWeapon("usp_tactical_mp");
+		self SetWeaponAmmoStock("usp_tactical_mp", 100);
+		self SetWeaponAmmoClip("usp_tactical_mp", 100);
+		self switchToWeapon("usp_tactical_mp");
+		self [[game["axis_model"]["GHILLIE"]]]();
+}
+
 init()
 {
 	maps\mp\gametypes\_rank::registerScoreInfo( "headshot", 50 );
@@ -111,23 +133,7 @@ killedPlayer( killId, victim, weapon, meansOfDeath )
 	//This code allows the Michael Myers to auto switch teams when they get a kill.
 	if( self.team == "axis" )
 	{
-		wait 0.1;
-		self takeAllWeapons();
-		self maps\mp\gametypes\_menus::addToTeam( "allies" );
-		self GiveWeapon("flash_grenade_mp");
-		self SetWeaponAmmoClip("flash_grenade_mp",2);
-		self SetOffhandSecondaryClass( "flash" );
-		self endon ( "disconnect" );
-		self setClientDvar( "cg_drawFriendlyNames", 0 );
-		self setClientDvar( "cg_drawCrosshairNames", 0 );
-		self setClientDvar( "compassFriendlyHeight", 0 );
-		self setClientDvar( "compassFriendlyHeight", 0 );
-		self setClientDvar( "cg_hudMapFriendlyHeight", 0 );
-		self setClientDvar( "cg_hudMapFriendlyWidth", 0 );
-		self GiveWeapon("usp_tactical_mp");
-		self SetWeaponAmmoStock("usp_tactical_mp", 100);
-		self SetWeaponAmmoClip("usp_tactical_mp", 100);
-		self switchToWeapon("usp_tactical_mp");
+		MikeToSurvivors();
 	}
 	
 	if ( !isKillstreakWeapon( weapon ) )
