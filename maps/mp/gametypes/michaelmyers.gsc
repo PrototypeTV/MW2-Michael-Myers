@@ -319,7 +319,7 @@ chooseFirstInfected()
 	
 	gameFlagWait( "prematch_done" );
 	//Intricate - We don't want to run this before Prematch is over.
-	level.infect_timerDisplay.label = &"Infection countdown: ";
+	level.infect_timerDisplay.label = &"Michael Myers countdown: ";
 	level.infect_timerDisplay setTimer( getDvarInt( "scr_infected_pick_time" ) );
 	level.infect_timerDisplay.alpha = 1;
 	level.infect_isBeingChosen = true;
