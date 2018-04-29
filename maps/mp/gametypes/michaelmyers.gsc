@@ -271,7 +271,7 @@ onSpawnPlayer()
 
 onPlayerKilled( eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc, psOffsetTime, deathAnimDuration, lifeId )
 {
-	if ( isDefined( attacker ) && self.team == "allies" && level.infect_choseFirstInfected == true ) //Can't stop team switch on suicide. Tried adding "attacker.lastkilledplayer != self" but it did not work...
+	if ( sMeansOfDeath == "MOD_MELEE" && self.team == "allies" && level.infect_choseFirstInfected == true ) // sMeansOfDeath == "MOD_MELEE" fixes team switch on suicide
 	{			
 		wait 0.1; //Added a wait here because of the players who love to abuse the system by suiciding and killing their allies.
 		playSoundOnPlayers( "mp_enemy_obj_captured", "allies" );
