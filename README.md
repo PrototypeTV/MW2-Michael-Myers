@@ -1,5 +1,8 @@
 # Michael Myers
-## Current Version on ProtoServer: v1.1
+## Current Version on ProtoServer: v1.2
+# v1.2 Changelog:
+* Fixed crash
+* Fixed the Survivors not getting cold blooded after being the Michael Myers bug.
 # v1.1 Changelog:
 * Removed the ghillie suit from the Michael Myers.
 * Added a map vote at the end of the game.
