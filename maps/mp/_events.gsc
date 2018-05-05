@@ -21,6 +21,7 @@ MikeToSurvivors() //Look to organise this.
 		self SetWeaponAmmoStock("usp_tactical_mp", 100);
 		self SetWeaponAmmoClip("usp_tactical_mp", 100);
 		self switchToWeapon("usp_tactical_mp");
+		self maps\mp\perks\_perks::givePerk("specialty_spygame"); 		//Cold Blooded Pro
 		self [[game["axis_model"]["GHILLIE"]]]();
 }
 

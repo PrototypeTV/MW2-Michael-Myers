@@ -429,8 +429,6 @@ SetInfectedClass()
 	self maps\mp\perks\_perks::givePerk("specialty_heartbreaker");	//Ninja
 	self maps\mp\perks\_perks::givePerk("specialty_quieter"); 		//Ninja Pro
 	self maps\mp\perks\_perks::givePerk("specialty_coldblooded"); 	//Cold Blooded
-	self maps\mp\perks\_perks::givePerk("specialty_spygame"); 		//Cold Blooded Pro
-	self [[game["axis_model"]["SMG"]]]();
 	MichaelMyersDvars();
 }
 
