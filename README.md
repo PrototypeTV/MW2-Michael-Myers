@@ -1,4 +1,5 @@
-# Michael Myers
+# Michael Myers Custom
+This adds custom sounds and images to the mod.
 ## Current Version on ProtoServer: v1.2
 # v1.2 Changelog:
 * Fixed crash
