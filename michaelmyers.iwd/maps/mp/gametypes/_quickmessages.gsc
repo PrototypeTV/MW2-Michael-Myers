@@ -48,50 +48,50 @@ quickcommands(response)
 	switch(response)		
 	{
 		case "1":
-			soundalias = "mp_cmd_followme";
+			soundalias = "UK_mp_cmd_followme";
 			saytext = &"QUICKMESSAGE_FOLLOW_ME";
 			//saytext = "Follow Me!";
 			break;
 
 		case "2":
-			soundalias = "mp_cmd_movein";
+			soundalias = "UK_mp_cmd_movein";
 			saytext = &"QUICKMESSAGE_MOVE_IN";
 			//saytext = "Move in!";
 			break;
 
 		case "3":
-			soundalias = "mp_cmd_fallback";
+			soundalias = "UK_mp_cmd_fallback";
 			saytext = &"QUICKMESSAGE_FALL_BACK";
 			//saytext = "Fall back!";
 			break;
 
 		case "4":
-			soundalias = "mp_cmd_suppressfire";
+			soundalias = "UK_mp_cmd_suppressfire";
 			saytext = &"QUICKMESSAGE_SUPPRESSING_FIRE";
 			//saytext = "Suppressing fire!";
 			break;
 
 		case "5":
-			soundalias = "mp_cmd_attackleftflank";
+			soundalias = "UK_mp_cmd_attackleftflank";
 			saytext = &"QUICKMESSAGE_ATTACK_LEFT_FLANK";
 			//saytext = "Attack left flank!";
 			break;
 
 		case "6":
-			soundalias = "mp_cmd_attackrightflank";
+			soundalias = "UK_mp_cmd_attackrightflank";
 			saytext = &"QUICKMESSAGE_ATTACK_RIGHT_FLANK";
 			//saytext = "Attack right flank!";
 			break;
 
 		case "7":
-			soundalias = "mp_cmd_holdposition";
+			soundalias = "UK_mp_cmd_holdposition";
 			saytext = &"QUICKMESSAGE_HOLD_THIS_POSITION";
 			//saytext = "Hold this position!";
 			break;
 
 		default:
 			assert(response == "8");
-			soundalias = "mp_cmd_regroup";
+			soundalias = "UK_mp_cmd_regroup";
 			saytext = &"QUICKMESSAGE_REGROUP";
 			//saytext = "Regroup!";
 			break;
@@ -115,44 +115,44 @@ quickstatements(response)
 	switch(response)		
 	{
 		case "1":
-			soundalias = "mp_stm_enemyspotted";
+			soundalias = "UK_mp_stm_enemyspotted";
 			saytext = &"QUICKMESSAGE_ENEMY_SPOTTED";
 			//saytext = "Enemy spotted!";
 			break;
 
 		case "2":
-			soundalias = "mp_stm_enemiesspotted";
+			soundalias = "mp_stm_enemiesspotted"; //Does not exist, will use another team's audio file.
 			saytext = &"QUICKMESSAGE_ENEMIES_SPOTTED";
 			//saytext = "Enemy down!";
 			break;
 
 		case "3":
-			soundalias = "mp_stm_iminposition";
+			soundalias = "UK_mp_stm_iminposition";
 			saytext = &"QUICKMESSAGE_IM_IN_POSITION";
 			//saytext = "I'm in position.";
 			break;
 
 		case "4":
-			soundalias = "mp_stm_areasecure";
+			soundalias = "UK_mp_stm_areasecure";
 			saytext = &"QUICKMESSAGE_AREA_SECURE";
 			//saytext = "Area secure!";
 			break;
 
 		case "5":
-			soundalias = "mp_stm_watchsix";
+			soundalias = "mp_stm_watchsix"; //Does not exist, will use another team's audio file.
 			saytext = &"QUICKMESSAGE_WATCH_SIX";
 			//saytext = "Grenade!";
 			break;
 
 		case "6":
-			soundalias = "mp_stm_sniper";
+			soundalias = "UK_mp_stm_sniper";
 			saytext = &"QUICKMESSAGE_SNIPER";
 			//saytext = "Sniper!";
 			break;
 
 		default:
 			assert(response == "7");
-			soundalias = "mp_stm_needreinforcements";
+			soundalias = "UK_mp_stm_needreinforcements";
 			saytext = &"QUICKMESSAGE_NEED_REINFORCEMENTS";
 			//saytext = "Need reinforcements!";
 			break;
@@ -176,38 +176,38 @@ quickresponses(response)
 	switch(response)		
 	{
 		case "1":
-			soundalias = "mp_rsp_yessir";
+			soundalias = "UK_mp_rsp_yessir";
 			saytext = &"QUICKMESSAGE_YES_SIR";
 			//saytext = "Yes Sir!";
 			break;
 
 		case "2":
-			soundalias = "mp_rsp_nosir";
+			soundalias = "UK_mp_rsp_nosir";
 			saytext = &"QUICKMESSAGE_NO_SIR";
 			//saytext = "No Sir!";
 			break;
 
 		case "3":
-			soundalias = "mp_rsp_onmyway";
+			soundalias = "UK_mp_rsp_onmyway";
 			saytext = &"QUICKMESSAGE_IM_ON_MY_WAY";
 			//saytext = "On my way.";
 			break;
 
 		case "4":
-			soundalias = "mp_rsp_sorry";
+			soundalias = "UK_mp_rsp_sorry";
 			saytext = &"QUICKMESSAGE_SORRY";
 			//saytext = "Sorry.";
 			break;
 
 		case "5":
-			soundalias = "mp_rsp_greatshot";
+			soundalias = "UK_mp_rsp_greatshot";
 			saytext = &"QUICKMESSAGE_GREAT_SHOT";
 			//saytext = "Great shot!";
 			break;
 
 		default:
 			assert(response == "6");
-			soundalias = "mp_rsp_comeon";
+			soundalias = "mp_rsp_comeon"; //Does not exist, will use another team's audio file.
 			saytext = &"QUICKMESSAGE_COME_ON";
 			//saytext = "Took long enough!";
 			break;
@@ -233,7 +233,7 @@ doQuickMessage( soundalias, saytext )
 		self.headiconteam = "none";
 		self.headicon = "talkingicon";
 
-		self playSound( prefix+soundalias );
+		self playSound( soundalias );
 		self sayAll(saytext);
 	}
 	else
@@ -245,7 +245,7 @@ doQuickMessage( soundalias, saytext )
 		
 		self.headicon = "talkingicon";
 
-		self playSound( prefix+soundalias );
+		self playSound( soundalias );
 		self sayTeam( saytext );
 		self pingPlayer();
 	}
