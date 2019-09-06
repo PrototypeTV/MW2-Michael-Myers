@@ -1,6 +1,8 @@
 # Michael Myers Custom
 This adds custom sounds and images to the mod.
-## Current Version on ProtoServer: v1.2
+The client and server files are now seperate as of v1.3.
+## Current Client Version: v1.3Beta
+## Current Server Version: v1.3Beta
 # v1.2 Changelog:
 * Fixed crash
 * Fixed the Survivors not getting cold blooded after being the Michael Myers bug.
@@ -9,4 +11,3 @@ This adds custom sounds and images to the mod.
 * Added a map vote at the end of the game.
 * Fixed the auto team swap on suicide bug.
 * Minor text changes.
-## Current WIP Version: ???
