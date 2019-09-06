@@ -1,6 +1,11 @@
 # Michael Myers Custom
 This adds custom sounds and images to the mod.
+
 The client and server files are now seperate as of v1.3.
+
+This allows editing of server sided files without needing the client to redownload the mod.
+
+Mod version will now follow the client version.
 ## Current Client Version: v1.3Beta
 ## Current Server Version: v1.3Beta
 # v1.2 Changelog:
