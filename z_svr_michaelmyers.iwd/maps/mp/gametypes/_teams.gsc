@@ -62,7 +62,7 @@ initScoreBoard()
 	scoreColor = getTeamColor( "allies" );	
 	setDvar("g_ScoresColor_Allies", scoreColor[0] + " " + scoreColor[1] + " " + scoreColor[2] );
 
-	setDvar("g_TeamName_Axis", "Infected");
+	setDvar("g_TeamName_Axis", "Michael Myers");
 	setDvar("g_TeamIcon_Axis", getTeamIcon( "axis" ));
 	setDvar("g_TeamIcon_MyAxis", getTeamIcon( "axis" ));
 	setDvar("g_TeamIcon_EnemyAxis", getTeamIcon( "axis" ));

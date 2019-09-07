@@ -1059,10 +1059,15 @@ giveRecentShieldXP()
 	self.recentShieldXP = 0;
 }
 
-
 Callback_PlayerDamage_internal( eInflictor, eAttacker, victim, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc, psOffsetTime )
 {	
 	if(isSubStr(sWeapon, "usp_") && self.team == "axis")
+		iDamage = 0;
+	
+	if (sMeansOfDeath == "MOD_EXPLOSIVE")
+		iDamage = 0;
+	
+	if (sMeansOfDeath == "MOD_IMPACT")
 		iDamage = 0;
 	
 	if ( !isReallyAlive( victim ) )

@@ -20,6 +20,7 @@
 
 main()
 {
+	setDvar("ui_gametype", "Michael Myers");
 	maps\mp\gametypes\_globallogic::init();
 	maps\mp\gametypes\_callbacksetup::SetupCallbacks();
 	maps\mp\gametypes\_globallogic::SetupCallbacks();
@@ -165,12 +166,9 @@ getSpawnPoint()
 SetDvars()
 {
 	//Intricate - Mandatory DVAR's.
-	setDvar( "ui_gametype", "Michael Myers" );
-	SetDvar( "g_TeamName_Allies", "Survivors" );
-	SetDvar( "g_TeamName_Axis", "Michael Myers" );
 	SetDvar( "ui_allow_teamchange", 1 );
 	SetDvar( "scr_game_hardpoints", 0 );
-	SetDvar( "scr_teambalance", 0 );
+	SetDvar( "scr_teambalance", 0 ); 
 	//Intricate - We'll give the option to modify the DVAR's for server owners.
 	SetDvarIfUninitialized( "moab", 0);
 	SetDvarIfUninitialized( "scr_infected_pick_time", 15 );
@@ -429,8 +427,6 @@ SetInfectedClass()
 	self maps\mp\perks\_perks::givePerk("specialty_heartbreaker");	//Ninja
 	self maps\mp\perks\_perks::givePerk("specialty_quieter"); 		//Ninja Pro
 	self maps\mp\perks\_perks::givePerk("specialty_coldblooded"); 	//Cold Blooded
-	self maps\mp\perks\_perks::givePerk("specialty_spygame"); 		//Cold Blooded Pro
-	self [[game["axis_model"]["SMG"]]]();
 	MichaelMyersDvars();
 }
 
