@@ -121,7 +121,7 @@ quickstatements(response)
 			break;
 
 		case "2":
-			soundalias = "mp_stm_enemiesspotted"; //Does not exist, will use another team's audio file.
+			soundalias = "US_mp_stm_enemyspotted"; //Test
 			saytext = &"QUICKMESSAGE_ENEMIES_SPOTTED";
 			//saytext = "Enemy down!";
 			break;
@@ -139,7 +139,7 @@ quickstatements(response)
 			break;
 
 		case "5":
-			soundalias = "mp_stm_watchsix"; //Does not exist, will use another team's audio file.
+			soundalias = "US_mp_stm_areasecure"; //Test
 			saytext = &"QUICKMESSAGE_WATCH_SIX";
 			//saytext = "Grenade!";
 			break;
@@ -175,6 +175,7 @@ quickresponses(response)
 
 	switch(response)		
 	{
+		//AYAYA
 		case "1":
 			soundalias = "UK_mp_rsp_yessir";
 			saytext = &"QUICKMESSAGE_YES_SIR";
@@ -205,11 +206,16 @@ quickresponses(response)
 			//saytext = "Great shot!";
 			break;
 
-		default:
-			assert(response == "6");
-			soundalias = "mp_rsp_comeon"; //Does not exist, will use another team's audio file.
+		case "6":
+			soundalias = "US_mp_rsp_greatshot"; //Test
 			saytext = &"QUICKMESSAGE_COME_ON";
 			//saytext = "Took long enough!";
+			break;
+		
+		default:
+			assert(response == "7");
+			soundalias = "US_mp_rsp_sorry"; //Test
+			saytext = &"QUICKMESSAGE_7_ARE_YOU_CRAZY";
 			break;
 	}
 
