@@ -168,7 +168,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"@QUICKMESSAGE_7_TEST"
+			text			"@QUICKMESSAGE_7_ARE_YOU_CRAZY"
 			decoration
 		}
 		execKey "7" { scriptMenuResponse "7"; close quickresponses }

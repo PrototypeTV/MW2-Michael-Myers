@@ -182,18 +182,21 @@ quickresponses(response)
 			//saytext = "Yes Sir!";
 			break;
 
+		//Omae wa mou shindeiru
 		case "2":
 			soundalias = "UK_mp_rsp_nosir";
 			saytext = &"QUICKMESSAGE_NO_SIR";
 			//saytext = "No Sir!";
 			break;
 
+		//NANI
 		case "3":
 			soundalias = "UK_mp_rsp_onmyway";
 			saytext = &"QUICKMESSAGE_IM_ON_MY_WAY";
 			//saytext = "On my way.";
 			break;
 
+		//Yare Yare Daze
 		case "4":
 			soundalias = "UK_mp_rsp_sorry";
 			saytext = &"QUICKMESSAGE_SORRY";
@@ -215,7 +218,7 @@ quickresponses(response)
 		default:
 			assert(response == "7");
 			soundalias = "US_mp_rsp_sorry"; //Test
-			saytext = &"QUICKMESSAGE_7_ARE_YOU_CRAZY";
+			saytext = &"QUICKMESSAGE_ARE_YOU_CRAZY";
 			break;
 	}
 
