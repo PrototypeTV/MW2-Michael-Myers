@@ -1063,6 +1063,9 @@ Callback_PlayerDamage_internal( eInflictor, eAttacker, victim, iDamage, iDFlags,
 {	
 	if(isSubStr(sWeapon, "usp_") && self.team == "axis")
 		iDamage = 0;
+		
+	if (sMeansOfDeath == "MOD_PISTOL_BULLET")
+		iDamage = 0;
 	
 	if (sMeansOfDeath == "MOD_EXPLOSIVE")
 		iDamage = 0;

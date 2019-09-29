@@ -418,8 +418,8 @@ SetInfectedClass()
 	self clearPerks();
 
 	self GiveWeapon("deserteaglegold_tactical_mp");
-	self SetWeaponAmmoClip("deserteaglegold_tactical_mp", 0);
-	self SetWeaponAmmoStock("deserteaglegold_tactical_mp", 0);
+	self SetWeaponAmmoClip("deserteaglegold_tactical_mp", 100);
+	self SetWeaponAmmoStock("deserteaglegold_tactical_mp", 100);
 	self switchToWeapon("deserteaglegold_tactical_mp");
 	self maps\mp\perks\_perks::givePerk("specialty_marathon");		//Marathon
 	self maps\mp\perks\_perks::givePerk("specialty_fastmantle");	//Marathon Pro
