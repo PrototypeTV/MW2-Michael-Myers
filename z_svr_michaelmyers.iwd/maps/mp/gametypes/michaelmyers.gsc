@@ -1,19 +1,3 @@
-/*************************************************************************************************************************************************************************************************************************************************************
-*																													Michael Myers V1																			 		 *
-*																																																						 *
-*																													Overall Credits:																					 *
-*																										Prototype for making it into Michael Myers.																		 *
-*                                                                                                       Rendflex main coder.																							 *
-*																										Intricate rewriting & updating.																					 *
-*																										momo5502 for MOAB & Script help.																				 *
-*																										Puffiamo for C4/Claymore Pickup code.																			 *
-*																										master131 & EMZ for scripting help.																				 *
-*																																																						 *
-*																													© 2018 Prototype																					 *
-*																There used to be a stupid threat here about not editing anything but that is extremely stupid. Edit this if you want.							         *
-*															      This mod IS to be used for any version of MW2 you want to play it on, I will not take action for enjoying this.										 *
-*************************************************************************************************************************************************************************************************************************************************************/
-
 #include maps\mp\_utility;
 #include maps\mp\gametypes\_hud_util;
 #include common_scripts\utility;
